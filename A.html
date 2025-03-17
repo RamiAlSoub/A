@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Razan Yoga</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-color: #d291bc; /* اللون الزهري */
+      --primary-color-dark: #f7ebf3; 
+      --text-dark: #1e293b;
+      --text-light: #64748b;
+      --extra-light: #fafafa;
+      --white: #ffffff;
+      --max-width: 1200px;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Work Sans", sans-serif;
+      background-color: var(--extra-light);
+      color: var(--text-dark);
+    }
+
+    .section__container {
+      max-width: var(--max-width);
+      margin: auto;
+      padding: 5rem 1rem;
+    }
+
+    .section__header {
+      font-size: 3rem;
+      font-weight: 300;
+      text-align: center;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+
+    .section__subheader {
+      font-size: 1rem;
+      font-weight: 300;
+      text-align: center;
+      color: var(--text-light);
+      letter-spacing: 2px;
+    }
+
+    .btn {
+      padding: 1rem 1.5rem;
+      outline: none;
+      border: none;
+      font-size: 1rem;
+      color: var(--white);
+      background-color: var(--primary-color);
+      border-radius: 5rem;
+      cursor: pointer;
+    }
+
+    img {
+      width: 100%;
+      display: flex;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    nav {
+      width: 100%; /* اجعل الشريط يمتد عبر كامل الصفحة */
+      padding: 2rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--primary-color); /* الخلفية الزهرية */
+    }
+
+    .nav__logo {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .nav__logo img {
+      max-width: 40px;
+    }
+
+    .nav__logo span {
+      font-size: 1.25rem;
+      color: var(--white); /* لون النص في الشعار أبيض */
+    }
+
+    .nav__links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .link a {
+      padding: 5px;
+      color: var(--white); /* لون النص في الروابط أبيض */
+      font-weight: 500;
+    }
+
+    .link a:hover {
+      color: var(--primary-color-dark); /* التغيير عند التمرير */
+    }
+
+    header {
+      position: relative;
+      text-align: center;
+      padding: 3rem 1rem;
+      background-image: url('https://your-image-url.com'); /* خلفية الهيدر */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .header__content h1 {
+      margin-bottom: 0.5rem;
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--text-dark);
+    }
+
+    .header__content h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: var(--text-light);
+    }
+
+    .about {
+      padding: 2rem 1rem;
+      background-color: var(--extra-light);
+      text-align: center;
+    }
+
+    .about__content h3 {
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+
+    .about__content p {
+      font-size: 1.125rem;
+      font-weight: 300;
+      color: var(--text-light);
+      line-height: 1.8rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .hero {
+      padding: 3rem 0;
+      background-color: var(--extra-light);
+    }
+
+    .hero__container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columns */
+      gap: 2rem;
+      text-align: center;
+      justify-items: center; /* Center content in each column */
+    }
+
+    .hero__card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+    }
+
+    .hero__card h4 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--text-dark);
+      text-align: center;
+    }
+
+    .hero__card p {
+      line-height: 1.5rem;
+      color: var(--text-light);
+      text-align: center;
+    }
+
+    .hero__card span {
+      margin-bottom: 1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      height: 200px;
+      background-color: var(--primary-color-dark);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .hero__card span img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .footer {
+      background-color: var(--primary-color); /* اللون الزهري في الفوتر */
+      padding: 2rem 0;
+      background-image: url('https://your-footer-image-url.com'); /* خلفية الفوتر */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .footer__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .footer__logo a {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--white);
+    }
+
+    .footer__col p {
+      font-size: 1.25rem;
+      color: var(--white);
+      text-align: center;
+    }
+
+    .footer__socials {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .footer__socials a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      aspect-ratio: 1;
+      font-size: 1.5rem;
+      color: var(--white);
+      background-color: #f7ebf330;
+      border-radius: 100%;
+    }
+
+    /* Media query for mobile screens */
+    @media (max-width: 768px) {
+      .hero__container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav__logo">
+      <span>Razan Yoga</span>
+    </div>   
+    <ul class="nav__links">
+      <li class="link"><a href="#">Home</a></li>
+      <li class="link"><a href="#">About</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="header__content">
+      <h1>Welcome to Razan Yoga</h1>
+      <h2>Your path to a balanced life through yoga</h2>
+      <h3>Our Yoga Pictures</h3>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <section class="hero">
+    <div class="hero__container">
+      <div class="hero__card">
+        <span><img src="https://th.bing.com/th/id/OIP.qoG7GKkic_dA2vKH_1RfswHaEK?rs=1&pid=ImgDetMain" alt="Feature 1"></span>
+        <h4>Sunday</h4>
+        <p>Grounded</p>
+      </div>
+      <div class="hero__card">
+        <span><img src="https://img.freepik.com/free-photo/young-woman-practicing-advanced-yoga-with-pink-block_23-2147941368.jpg" alt="Feature 2"></span>
+        <h4>Monday</h4>
+        <p>Flow</p>
+      </div>
+      <div class="hero__card">
+        <span><img src="https://img.freepik.com/free-photo/side-view-young-sporty-woman-practicing-yoga-lesson_23-2147941365.jpg" alt="Feature 3"></span>
+        <h4>Tuesday</h4>
+        <p>Peace</p>
+      </div>
+      <div class="hero__card">
+        <span><img src="https://th.bing.com/th/id/OIP.VYtCk6_QZyUiHKWNSyqlHgHaEo?rs=1&pid=ImgDetMain" alt="Feature 4"></span>
+        <h4>Wednesday</h4>
+        <p>Mindfulness</p>
+      </div>
+      <!-- Added new days -->
+      <div class="hero__card">
+        <span><img src="https://th.bing.com/th/id/OIP.H3ZTDTZvZEM6moER_3VJ2QHaEK?rs=1&pid=ImgDetMain" alt="Feature 5"></span>
+        <h4>Thursday</h4>
+        <p>Serenity</p>
+      </div>
+      <div class="hero__card">
+        <span><img src="https://th.bing.com/th/id/OIP.cAqMYhd6l5DejFZM-PyzNQAAAA?rs=1&pid=ImgDetMain" alt="Feature 6"></span>
+        <h4>Friday</h4>
+        <p>Strength</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__logo">
+        <a href="#">Razan Yoga</a>
+      </div>
+      <div class="footer__col">
+        <p>Contact us at contact@razanyoga.com</p>
+      </div>
+      <div class="footer__socials">
+        <a href="#">FB</a>
+        <a href="#">IG</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
